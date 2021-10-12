@@ -3,17 +3,17 @@ import { tareasRouter } from "../routes/tareas.routes";
 import { conexion } from "./sequelize";
 import swagger from "swagger-ui-express";
 import documentacion from "../../swagger.json";
-import cors from "cors";
+// import cors from "cors";
 
 export class Server {
   constructor() {
     this.app = express();
     this.puerto = process.env.PORT || 8000;
-    this.app.use(cors({
-      origin: "*",
-      methods: "PUT",
-      allowedHeaders: ["Content-Type"],
-    }));
+    // this.app.use(cors({
+    //   origin: "*",
+    //   methods: "PUT",
+    //   allowedHeaders: ["Content-Type"],
+    // }));
     this.bodyParser();
     this.rutas();
   }
